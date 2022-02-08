@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SensorDactilar.LoginPage">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="LightSeaGreen">
+            <StackLayout Padding="45">
+                <Label
+                 FontSize="Title"
+                 HorizontalOptions="CenterAndExpand"
+                 TextColor="black"
+                 Text="Login con sensor dactilar"
+                 VerticalOptions="Center"/>
+                <Image Source="huella.png"
+                       WidthRequest="250"/>
+                <Frame>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text ="Password"
+                       VerticalOptions="Center"/>
+                        <Entry Grid.Row="0"
+                       Grid.Column="1"
+                       x:Name="txtuser"/>
+
+                        <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text ="Usuario"/>
+                        <Entry Grid.Row="1"
+                       Grid.Column="1"
+                       IsPassword="true"
+                       VerticalOptions="Start"
+                       x:Name="txtpass"/>
+                    </Grid>
+                </Frame>
+                <StackLayout Orientation="Horizontal">
+                    <Label HorizontalOptions="StartAndExpand"
+                Text="Recordar usuario"/>
+                    <Switch IsToggled="True"/>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Button 
+                BackgroundColor="Bisque"
+                Clicked="btn_login_Clicked"
+                CornerRadius="45"
+                FontSize="Large"
+                HorizontalOptions="FillAndExpand"
+                Text="Login"/>
+                    <Button 
+                BackgroundColor="LawnGreen"
+                Clicked="btn_biometrica_Clicked"
+                CornerRadius="45"
+                FontSize="Large"
+                HorizontalOptions="FillAndExpand"
+                Text="huella"/>
+                </StackLayout>
+                
+                <StackLayout Margin="20"
+                Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <ImageButton Source="face.png" WidthRequest="75"/>
+                    <ImageButton Source="twitter.png"  WidthRequest="75"/>
+                    <ImageButton Source="instagram.png"  WidthRequest="75"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
